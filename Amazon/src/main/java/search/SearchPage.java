@@ -4,8 +4,7 @@ import base.CommonApi;
 
 public class SearchPage extends CommonApi {
     public void searchMenu(){
-       // typeOnElement(C,"Books");
-    //  typeOnElementNEnter("#twotabsearchtextbox","books");
+        //  typeOnElementNEnter("#twotabsearchtextbox","books");
       typeOnElement("#twotabsearchtextbox","Books");
       clickOnSearch();
       navigateBack();
@@ -16,5 +15,9 @@ public class SearchPage extends CommonApi {
      // typeOnElementNEnter("#twotabsearchtextbox","Books");
        // navigateBack();
        // clearField("twotabsearchtextbox");
+    }
+
+    public void dropDownList(){
+        dropDown();
     }
 }

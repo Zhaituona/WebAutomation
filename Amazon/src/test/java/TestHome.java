@@ -9,4 +9,9 @@ public class TestHome extends SearchPage {
         searchMenu();
         //driver.findElement(By.id("twotabsearchtextbox")).sendKeys("books");
     }
+
+    @Test
+    public void test2(){
+        dropDownList();
+    }
 }
