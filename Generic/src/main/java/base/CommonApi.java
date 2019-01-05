@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -79,19 +80,23 @@ public class CommonApi {
 
 
     public void clearField(String locator){
-
         driver.findElement(By.id(locator)).clear();
     }
 
     public void navigateBack(){
-
         driver.navigate().back();
     }
 
-    public void dropDown(){
-        driver.findElement(By.name("url")).click();
-        Select s = new Select (driver.findElement(By.xpath("//option[@value='search-alias=alexa-skills']")));
+    public void dropDown(String locator){
+        Select s = new Select(driver.findElement(By.id(locator)));
+        s.selectByIndex(3);
     }
+
+    public void singIn(String locator){
+        Actions action =new Actions(driver);
+        action.moveToElement(driver.findElement(By.cssSelector(locator))).perform();
+    }
+
 
 
   //  @AfterMethod

@@ -18,6 +18,11 @@ public class SearchPage extends CommonApi {
     }
 
     public void dropDownList(){
-        dropDown();
+
+        dropDown("searchDropdownBox");
+    }
+
+    public void singInClick(){
+        singIn("#nav-link-accountList > span.nav-line-2");
     }
 }

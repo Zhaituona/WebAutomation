@@ -12,6 +12,12 @@ public class TestHome extends SearchPage {
 
     @Test
     public void test2(){
+        singInClick();
+    }
+
+    @Test
+    public void test3(){
+
         dropDownList();
     }
 }
